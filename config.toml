@@ -35,10 +35,10 @@ disable_theme_toggle = false
 disable_root_sidebar_hide = false
 edit_url = ""
 nav = [
-  { name = "Engineering", url = "/engineering/", type = "url", icon = "fa-solid fa-gear" },
-  { name = "Math", url = "/math/", type = "url", icon = "fa-solid fa-square-root-variable" },
-  { name = "Essays", url = "/essays/", type = "url", icon = "fa-solid fa-scale-balanced" },
-  { name = "About", url = "/about/", type = "url", icon = "fa-solid fa-user" },
+  { name = "Engineering", url = "Blog/engineering/", type = "url", icon = "fa-solid fa-gear" },
+  { name = "Math", url = "Blog/math/", type = "url", icon = "fa-solid fa-square-root-variable" },
+  { name = "Essays", url = "Blog/essays/", type = "url", icon = "fa-solid fa-scale-balanced" },
+  { name = "About", url = "Blog/about/", type = "url", icon = "fa-solid fa-user" },
 ]
 
 [extra.comments]
