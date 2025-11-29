@@ -1,0 +1,357 @@
+/* Backup of original tokyonight theme - created automatically */
+
+/* --- Tokyonight (Night) full site theme --- */
+/* Palette */
+$bg: #1a1b26
+$bg-alt: #16161e
+$panel: #1f2335
+$elev-1: #24283b
+$elev-2: #2a2f45
+$fg: #c0caf5
+$muted: #a9b1d6
+$muted-2: #9aa5ce
+$blue: #7aa2f7
+$blue-alt: #7dcfff
+$purple: #bb9af7
+$green: #9ece6a
+$yellow: #e0af68
+$orange: #ff9e64
+$red: #f7768e
+$teal: #73daca
+
+$radius: .75rem
+$radius-sm: .5rem
+$pad: 1rem
+$maxw: 860px
+$shadow: 0 10px 30px rgba(0,0,0,.25)
+
+/* Base */
+:root
+  color-scheme: dark
+*
+  box-sizing: border-box
+  -webkit-tap-highlight-color: transparent
+
+::selection
+  background: rgba($purple, .35)
+
+html, body
+  height: 100%
+
+body
+  background: linear-gradient(180deg, $bg 0%, $bg-alt 100%)
+  color: $fg
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Fira Sans", Helvetica, Arial, sans-serif
+  line-height: 1.65
+  margin: 0
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+img, svg, video
+  max-width: 100%
+  height: auto
+  border-radius: $radius-sm
+
+.container
+  max-width: $maxw
+  margin: 0 auto
+  padding: $pad
+
+/* Typography */
+h1, h2, h3, h4, h5, h6
+  color: $fg
+  line-height: 1.25
+  margin: 1.2rem 0 .6rem
+
+h1
+  font-size: clamp(1.8rem, 3vw, 2.2rem)
+  color: $blue
+h2
+  font-size: clamp(1.5rem, 2.5vw, 1.8rem)
+  color: $purple
+h3
+  font-size: 1.25rem
+  color: $fg
+
+p
+  margin: .75rem 0
+  color: $fg
+
+small, .muted
+  color: $muted
+
+a
+  color: $blue
+  text-decoration: none
+  transition: color .15s ease, background .15s ease
+  &:hover
+    color: $purple
+  &:focus-visible
+    outline: 2px solid $purple
+    outline-offset: 2px
+    border-radius: .25rem
+
+hr
+  border: 0
+  height: 1px
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.08), transparent)
+  margin: 2rem 0
+
+/* Header / Nav */
+header
+  background: rgba($panel, .6)
+  backdrop-filter: blur(6px)
+  border-bottom: 1px solid rgba(255,255,255,.06)
+
+.nav
+  display: flex
+  align-items: center
+  justify-content: space-between
+  gap: .75rem
+
+.brand
+  color: $fg
+  font-weight: 800
+  letter-spacing: .2px
+  text-decoration: none
+
+.nav ul
+  display: flex
+  gap: .75rem
+  list-style: none
+  padding: 0
+  margin: 0
+
+.nav a
+  color: $muted
+  padding: .4rem .6rem
+  border-radius: .5rem
+  &:hover
+    background: $elev-1
+    color: $fg
+
+/* Cards & generic panels */
+.card
+  background: $panel
+  border: 1px solid rgba(255,255,255,.06)
+  border-radius: $radius
+  box-shadow: $shadow
+  padding: $pad
+
+/* Lists */
+.post-list
+  list-style: none
+  padding: 0
+  margin: 0
+  li
+    margin: 1rem 0
+    padding: .75rem
+    background: $elev-1
+    border: 1px solid rgba(255,255,255,.06)
+    border-radius: $radius
+    transition: transform .12s ease, background .12s ease
+    &:hover
+      transform: translateY(-2px)
+      background: $elev-2
+
+/* Tags / chips */
+.tags a, .chip
+  display: inline-block
+  background: $elev-1
+  color: $teal
+  border: 1px solid rgba(115, 218, 202, .2)
+  padding: .15rem .5rem
+  margin-right: .4rem
+  margin-top: .2rem
+  font-size: .85rem
+  border-radius: 999px
+
+/* Buttons */
+.button, button, .btn
+  background: linear-gradient(180deg, $blue 0%, $blue-alt 100%)
+  color: #0b1021
+  font-weight: 700
+  padding: .55rem .9rem
+  border: 0
+  border-radius: .6rem
+  box-shadow: 0 6px 18px rgba(122,162,247,.25)
+  cursor: pointer
+  transition: transform .1s ease, filter .1s ease
+  &:hover
+    filter: brightness(1.05)
+  &:active
+    transform: translateY(1px)
+  &.ghost
+    background: transparent
+    color: $blue
+    border: 1px solid rgba(122,162,247,.4)
+    box-shadow: none
+    &:hover
+      background: rgba(122,162,247,.08)
+
+/* Forms */
+input[type="text"], input[type="search"], input[type="email"], textarea, select
+  width: 100%
+  color: $fg
+  background: $elev-1
+  border: 1px solid rgba(255,255,255,.08)
+  border-radius: $radius-sm
+  padding: .6rem .7rem
+  outline: none
+  transition: border-color .12s ease, box-shadow .12s ease
+  &:focus
+    border-color: $purple
+    box-shadow: 0 0 0 3px rgba(187,154,247,.2)
+label
+  color: $muted
+
+/* Tables */
+table
+  width: 100%
+  border-collapse: collapse
+  background: $panel
+  border: 1px solid rgba(255,255,255,.06)
+  border-radius: $radius
+  overflow: hidden
+th, td
+  padding: .75rem
+  border-bottom: 1px solid rgba(255,255,255,.06)
+th
+  text-align: left
+  color: $muted
+  background: $elev-1
+
+/* Code blocks & inline code (site chrome) */
+code, pre
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace
+
+pre
+  background: $elev-1
+  border: 1px solid rgba(255,255,255,.06)
+  padding: .9rem
+  border-radius: $radius
+  overflow: auto
+
+pre code
+  display: block
+  color: $fg
+
+code:not(pre code)
+  background: $elev-1
+  color: $fg
+  padding: .15rem .35rem
+  border-radius: .4rem
+  border: 1px solid rgba(255,255,255,.06)
+
+/* Optional: if you keep highlight_theme=\"css\", basic token hints */
+.highlight .keyword, .kw
+  color: $purple
+.highlight .string, .st
+  color: $green
+.highlight .number, .constant, .mi, .mf, .mn
+  color: $orange
+.highlight .function, .nf
+  color: $blue-alt
+.highlight .type, .class, .nc
+  color: $blue
+.highlight .comment, .cm
+  color: #565f89
+  font-style: italic
+.highlight
+  background: $elev-1
+  border: 1px solid rgba(255,255,255,.06)
+  border-radius: $radius
+  padding: .9rem
+
+/* Blockquotes */
+blockquote
+  background: $elev-1
+  color: $muted
+  border-left: 4px solid $purple
+  padding: .75rem 1rem
+  margin: 1rem 0
+  border-radius: 0 $radius $radius 0
+
+/* Pagination */
+.pager
+  display: flex
+  gap: .6rem
+  margin-top: 1.5rem
+  a
+    background: $elev-1
+    color: $fg
+    border: 1px solid rgba(255,255,255,.06)
+    padding: .45rem .7rem
+    border-radius: $radius-sm
+    &:hover
+      background: $elev-2
+
+/* Footer */
+.footer
+  margin-top: 3rem
+  color: $muted
+  a
+    color: $muted-2
+    &:hover
+      color: $fg
+
+/* Search input (if you add one) */
+.search
+  position: relative
+.search input
+  padding-left: 2.2rem
+.search .icon
+  position: absolute
+  left: .6rem
+  top: 50%
+  transform: translateY(-50%)
+  opacity: .7
+
+/* Mermaid (dark friendly) – light touch overrides */
+.mermaid
+  background: $panel
+  border: 1px solid rgba(255,255,255,.06)
+  border-radius: $radius
+  padding: .5rem
+  svg
+    color: $fg
+  .label, .nodeLabel, .edgeLabel
+    fill: $fg !important
+  .node rect, .cluster rect, .task, .classBox
+    fill: $elev-1 !important
+    stroke: $muted-2 !important
+  .edgePath path, .flowchart-link
+    stroke: $muted-2 !important
+
+/* KaTeX – inherit text color, tweak block spacing */
+.katex, .katex-display
+  color: inherit
+.katex-display
+  padding: .2rem 0
+  background: transparent
+
+/* Scrollbars (WebKit) */
+::-webkit-scrollbar
+  height: 10px
+  width: 10px
+::-webkit-scrollbar-track
+  background: $bg-alt
+  border-radius: 999px
+::-webkit-scrollbar-thumb
+  background: $elev-2
+  border-radius: 999px
+  border: 2px solid $bg-alt
+  &:hover
+    background: lighten($elev-2, 6%)
+
+/* Utility classes */
+.grid
+  display: grid
+  gap: 1rem
+.grid.two
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr))
+.center
+  display: grid
+  place-items: center
+.round
+  border-radius: $radius

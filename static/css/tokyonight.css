@@ -1,0 +1,73 @@
+/* Tokyonight (Night) for Zola highlight_theme="css"
+   Works with common Syntect token class names (short + long) */
+
+:root {
+  --tn-bg: #1a1b26;
+  --tn-bg-alt: #16161e;
+  --tn-fg: #c0caf5;
+  --tn-muted: #a9b1d6;
+  --tn-blue: #7aa2f7;
+  --tn-cyan: #7dcfff;
+  --tn-purple: #bb9af7;
+  --tn-green: #9ece6a;
+  --tn-yellow: #e0af68;
+  --tn-orange: #ff9e64;
+  --tn-red: #f7768e;
+  --tn-teal: #73daca;
+}
+
+/* Block + inline code containers */
+pre code { display: block; padding: 1rem; background: var(--tn-bg-alt); color: var(--tn-fg); border-radius: .6rem; }
+code:not(pre code) { padding: .2rem .35rem; background: var(--tn-bg-alt); color: var(--tn-fg); border-radius: .35rem; }
+pre { background: var(--tn-bg-alt); }
+
+/* Optional line number styling if enabled */
+.lineno { color: #3b4261; }
+
+/* Fallback: ensure spans inherit */
+pre code span { color: inherit; }
+
+/* --- Tokens (cover short + long Syntect classes) --- */
+
+/* Comments */
+.cm, .c, .comment { color: #565f89; font-style: italic; }
+
+/* Keywords */
+.k, .kw, .keyword { color: var(--tn-purple); }
+
+/* Operators */
+.o, .op, .operator { color: #89ddff; }
+
+/* Punctuation */
+.p, .punctuation { color: var(--tn-fg); }
+
+/* Strings */
+.s, .st, .string { color: var(--tn-green); }
+.se, .string.escape { color: var(--tn-teal); }
+
+/* Numbers & constants */
+.m, .mi, .mf, .mn, .number, .constant { color: var(--tn-orange); }
+.bn, .fl, .dv { color: var(--tn-orange); }
+
+/* Booleans */
+.mb, .boolean { color: var(--tn-orange); }
+
+/* Types / classes */
+.t, .ty, .type, .class, .nc { color: var(--tn-blue); }
+
+/* Functions */
+.nf, .f, .fu, .function { color: var(--tn-cyan); }
+
+/* Attributes / properties */
+.na, .at, .attribute { color: var(--tn-yellow); }
+
+/* Variables & members */
+.nv, .va, .variable { color: var(--tn-fg); }
+.vk, .variable.other.member { color: var(--tn-cyan); }
+
+/* Builtins / tags / annotations */
+.nb, .bu, .tag, .nt { color: var(--tn-red); }
+.an, .annotation { color: var(--tn-yellow); }
+
+/* Errors */
+.err, .error { color: var(--tn-red); background: #33222b; }
