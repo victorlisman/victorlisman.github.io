@@ -1,5 +1,5 @@
 # The URL the site will be built for (update to your real domain in prod)
-base_url = "https://victorlisman.github.io/Blog/"
+base_url = "https://victorlisman.github.io/"
 title = "VicBlog"
 theme = "goyo"
 # Whether to automatically compile all Sass files in the sass directory
